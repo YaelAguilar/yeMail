@@ -1,13 +1,13 @@
 import UserSchema from '../../infrastructure/db/MongooseUserModel';
-import { User } from '../../domain/model/User';
+import { User } from '../model/User';
 
 export class UserRepository {
-    async createUser(userData: User) {
-        const user = new UserSchema(userData);
-        await user.save();
+    async save(user: User) {
+        const userDocument = new UserSchema({ email: user.email, password: user.password });
+        await userDocument.save();
     }
 
-    async findUserByEmail(email: string) {
+    async findByEmail(email: string) {
         return UserSchema.findOne({ email });
     }
 }
