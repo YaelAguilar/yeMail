@@ -13,7 +13,7 @@ export class EmailController {
             res.status(500).json({ message: 'Error desconocido' });
         }
     }
-
+    //short polling
     async checkForNewEmails(req: Request, res: Response) {
         try {
             const userId = req.params.userId;
@@ -23,7 +23,7 @@ export class EmailController {
             res.status(500).json({ message: 'Error desconocido' });
         }
     }
-
+    //long polling
     async waitForNewEmails(req: Request, res: Response) {
         try {
             const userId = req.params.userId;
