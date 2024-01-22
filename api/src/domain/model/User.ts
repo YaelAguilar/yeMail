@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 
 export class User {
-    constructor(public email: string, private password: string) {}
+    constructor(public email: string, public password: string) {}
 
     async hashPassword() {
         this.password = await bcrypt.hash(this.password, 10);
