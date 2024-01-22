@@ -1,5 +1,5 @@
 import express from 'express';
-import { UserController } from '../controller/UserController';
+import { UserController } from './UserController';
 import { UserService } from '../../application/service/UserService';
 import { UserRepository } from '../../domain/repository/UserRepository';
 
