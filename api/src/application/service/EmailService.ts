@@ -10,9 +10,9 @@ export class EmailService {
         await this.emailRepository.save(email);
 
         const transporter = nodemailer.createTransport({
-            service: 'gmail', // Ejemplo, ajusta según tu proveedor
+            service: 'gmail', 
             auth: {
-                user: 'tu-email@gmail.com', // Tus credenciales
+                user: 'tu-email@gmail.com',
                 pass: 'tu-contraseña',
             },
         });
