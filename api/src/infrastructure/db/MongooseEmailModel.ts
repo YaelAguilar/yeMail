@@ -1,6 +1,6 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
-export interface IEmail extends Document {
+interface IEmail extends mongoose.Document {
     from: string;
     to: string;
     subject: string;
